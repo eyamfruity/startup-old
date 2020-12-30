@@ -1,0 +1,37 @@
+.carousel
+    &__photo
+        margin-bottom: 17px
+    &__name
+        font-size: 14px
+        line-height: 14px
+        margin-bottom: 10px
+    &__position
+        font-size: 13px
+        line-height: 13px
+    &__slide
+        display: flex
+        align-items: center
+        flex-direction: column
+        position: relative
+    &__clicked
+        background: rgba(157, 157, 157, .5)
+        width: 263px
+        height: 250px
+        position: absolute
+        left: 11px
+        top: 0
+    &-clicked
+        &__content
+            position: absolute
+            top: 190px
+            left: 75px
+            display: flex
+            justify-content: space-between
+        &__wraper
+            display: block
+            width: 28px
+            height: 28px
+            text-align: center
+            transition: background .2s
+            &_active
+                background: $main-elements-color

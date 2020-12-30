@@ -1,0 +1,21 @@
+.works
+    &-tabs
+        &__tabs
+            list-style-type: none
+            display: flex
+            justify-content: space-between
+            width: 420px
+            margin: 0 auto 42px
+        &__tab
+            font-size: 16px
+            line-height: 16px
+            cursor: pointer
+            &_active
+                color: $main-elements-color
+        &__item
+            margin: 29px 0 0 29px
+            &:nth-child(3n+1)
+                margin-left: 0
+        &__items
+            display: flex
+            flex-wrap: wrap
