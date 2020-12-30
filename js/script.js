@@ -33,4 +33,11 @@ $(document).ready(function(){
         $(this).toggleClass('works-tabs__tab_active');
         $('.works-tabs__items').hide().eq($(this).index()).fadeIn();
     });
+
+    $('.works-tabs__item-hovered').hide().on('mouseleave', function(){
+        $('.works-tabs__item-hovered').hide();
+    });
+    $('.works-tabs__item').on('mouseenter', function(){
+        $('.works-tabs__item-hovered').hide().eq($(this).index('.works-tabs__item')).fadeIn(250);
+    });
 });
