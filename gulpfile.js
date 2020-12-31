@@ -39,4 +39,4 @@ gulp.task('watch', function() {
     gulp.watch("css/swiper/swiper-bundle.css", gulp.parallel('swiper'));
 })
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'swiper'));

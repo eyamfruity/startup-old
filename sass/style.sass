@@ -1,9 +1,4 @@
 @import 'base/vars'  
-@import 'blocks/section-intro'
-@import 'blocks/about'
-@import 'blocks/carousel'
-@import 'blocks/section-inner'
-@import 'blocks/works'
     
 body 
     color: $main-font-color
@@ -12,6 +7,33 @@ ul
     padding: 0
 
 .container
-    width: 1138px
+    max-width: 1148px //width 1138
+    padding: 0 10px
     margin: 0 auto
+
+.font-red
+    color: $main-elements-color
+
+@media (max-width: 1147px)
+    .container
+        max-width: 970px
+
+@media (max-width: 1001px)
+    .container 
+        max-width: 730px
+
+@media (max-width: 777px)
+    .container
+        max-width: none
+
+@import 'blocks/btn'
+@import 'blocks/section-intro'
+@import 'blocks/about'
+@import 'blocks/carousel'
+@import 'blocks/section-inner'
+@import 'blocks/works'
+@import 'blocks/overlay'
+@import 'blocks/get-form'
+@import 'blocks/form'
+@import 'blocks/form-error'
 

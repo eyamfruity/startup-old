@@ -1,0 +1,50 @@
+.get-form
+    background: $second-bg
+    &__intro
+        margin-bottom: 69px
+    &__content
+        display: flex
+    &__list
+        font-size: 12px
+        line-height: 20px
+        flex: 2
+        list-style-type: none
+        padding-left: 24px
+        a
+            color: $main-font-color
+
+.get-form-list
+    &__heading
+        text-transform: uppercase
+        font-size: 14px
+        line-height: 14px
+    &__item
+        position: relative
+        padding-bottom: 25px
+        &:nth-child(1)::before
+            position: absolute
+            left: -26px
+            top: -2px
+            content: ''
+            width: 12px
+            height: 17px
+            display: block
+            background: left top/cover no-repeat url("../img/marker.svg")
+        &:nth-child(2)::before
+            position: absolute
+            left: -26px
+            top: -3px
+            content: ''
+            width: 12px
+            height: 20px
+            display: block
+            background: left top/cover no-repeat url("../img/phone.svg")
+        &:nth-child(3)::before
+            position: absolute
+            left: -26px
+            top: 1.5px
+            content: ''
+            width: 15px
+            height: 11px
+            display: block
+            background: left top/cover no-repeat url("../img/mail.svg")
