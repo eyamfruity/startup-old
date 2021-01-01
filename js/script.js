@@ -65,5 +65,34 @@ $(document).ready(function(){
             message: 'required'
         }
     });
+
+    //Отправка форм
+    $('form').click(function(){
+        if($(this).valid()){
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                // dataType: 'html',
+                data: $(this).serialize()
+            }).done(function(){
+                $('form').trigger('reset');
+            });
+            return false;
+        }
+    });
+
+    //Появление фиксированного якоря и плавный скролл
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 770){
+            $('.to-top').fadeIn(200);
+        } else {
+            $('.to-top').fadeOut(200);
+        }
+    });
+    $("a[href^='#']").click(function(){
+        var _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
 });
 

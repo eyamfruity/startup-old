@@ -9,7 +9,72 @@
     <title>Startup</title>
 </head>
 <body>
-    <section class="about">
+    <header class="header font-white" id="top">
+        <div class="container">
+            <div class="section-inner header__inner">
+                <div class="header-top">
+                    <a href="#" class="logo">
+                        Startup
+                    </a>
+                    <nav class="nav">
+                        <ul class="nav__list nav-list">
+                            <li class="nav-list__item">
+                                <a href="#" class="nav-list__link">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="#" class="nav-list__link">
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="#about" class="nav-list__link">
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="#works" class="nav-list__link">
+                                    Works
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="#" class="nav-list__link">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="#" class="nav-list__link">
+                                    Clients
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="#get-form" class="nav-list__link">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-bot">
+                    <div class="header__intro header-intro">
+                        <h1 class="header-intro__main-heading">
+                            welcome to startup
+                        </h1>
+                        <h2 class="header-intro__second-heading">
+                            Your Favourite Creative Agency Template
+                        </h2>
+                        <div class="btn">
+                            <a class="font-white" href="#">
+                                get started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about" id="about">
         <div class="container">
             <div class="section-inner">
                 <div class="section-intro about__intro">
@@ -181,7 +246,7 @@
             </div>
         </div>
     </section>
-    <section class="works">
+    <section class="works" id="works">
         <div class="container">
             <div class="section-inner">
                 <div class="section-intro">
@@ -313,7 +378,7 @@
             </div>
         </div>
     </section>
-    <section class="get-form">
+    <section class="get-form" id="get-form">
         <div class="container">
             <div class="section-inner">
                 <div class="section-intro get-form__intro">
@@ -354,7 +419,7 @@
                             </div>
                         </li>
                     </ul>
-                    <form class="form" id="form-1" action="#">
+                    <form class="form" id="form-1" action="mailer.php" method="POST">
                         <div class="form__input-wrapper">
                             <div class="form__input-error">
                                 <input class="form__input" placeholder="YOUR NAME" name="name" type="text">
@@ -370,10 +435,10 @@
                             </div>
                         </div>
                         <div class="form__message-error">
-                            <textarea class="form__message" placeholder="WRITE YOUR MESSAGE" name="message" type="text"></textarea>
+                            <textarea class="form__message" placeholder="WRITE YOUR MESSAGE" name="message"></textarea>
                         </div>
                         <div class="form__button-alert-wrapper">
-                            <button class="btn form__btn">
+                            <button type="button" class="btn form__btn">
                                 send message
                             </button>
                             <div class="form__alert">
@@ -386,8 +451,11 @@
         </div>
     </section>
     <div class="modal">
-        <img class="modal__photo" src="" alt="">
+        <img class="modal__photo" src="img/work-1.jpg" alt="">
     </div>
+    <a href="#top" class="to-top">
+        &uarr;
+    </a>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/jquery.js"></script>
