@@ -85,7 +85,8 @@ $(document).ready(function(){
     });
 
     //Отправка форм
-    $('form').click(function(){
+    $('form').submit(function(e){
+        e.preventDefault();
         if($(this).valid()){
             $.ajax({
                 type: 'POST',
