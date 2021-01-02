@@ -1,0 +1,67 @@
+.blog-posts
+    background: $second-bg
+    &__post
+        margin-bottom: 76px
+        display: flex
+        justify-content: space-between
+        position: relative
+        &:last-child
+            margin: 0
+            &::after
+                display: none
+        &::after
+            content: ''
+            display: block
+            height: 1px
+            width: 100%
+            position: absolute
+            bottom: -38px
+            background: #dddddd
+    &__content
+        width: 56%
+    &__top
+        display: flex
+        margin-bottom: 18px
+        align-items: center
+    &__date
+        margin-right: 23px
+        border: 1px solid #777777
+        color: #777777
+        width: 76px
+        height: 76px
+        font-family: 'Montserrat', sans-serif
+        text-transform: uppercase
+        font-weight: 700
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+    &__sup-heading
+        font-size: 16px
+    &__sup-heading-link
+        color: $main-font-color
+        &:hover
+            text-decoration: none
+    &__sub-heading
+        font-size: 13px
+        color: #777777
+    &__text
+        font-size: 14px
+        line-height: 24px
+        margin-bottom: 18px
+    &__intro
+        margin-bottom: 68px
+    &__link
+        color: #777777
+        font-size: 13px
+        line-height: 13px
+        font-weight: 700
+        text-transform: uppercase
+
+.blog-posts-date
+    &__number
+        font-size: 28px
+        line-height: 28px
+    &__month
+        font-size: 14px
+        line-height: 14px

@@ -1,0 +1,35 @@
+.footer
+    background: $main-elements-color
+
+.footer-inner
+    padding: 50px 0
+    &__img-wrapper
+        display: block
+        text-align: center
+        line-height: 29px
+        width: 35px
+        height: 35px
+        border: 1px solid #ffffff
+        border-radius: 50%
+        margin-right: 14px
+        &:last-child
+            margin: 0
+    &__top
+        display: flex
+        justify-content: center
+        margin-bottom: 55px
+        position: relative
+        &::after
+            content: ''
+            display: block
+            width: 50px
+            height: 2px
+            background: #ffffff
+            position: absolute
+            bottom: -31px
+            left: calc(50% - 25px)
+    &__bot
+        text-align: center
+        text-transform: uppercase
+        font-size: 12px
+        line-height: 12px

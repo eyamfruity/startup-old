@@ -1,17 +1,24 @@
 $(document).ready(function(){
-    //Слайдер
-    new Swiper('.carousel', {
+    //Слайдер about
+    var swiper1 = new Swiper('.carousel', {
         navigation: {
             prevEl: '.swiper-button-prev',
             nextEl: '.swiper-button-next'
         },
         autoplay: {
-            delay: 5000
+            delay: 4000
         },
-        slidesPerView: 4,
-        allowSwipePrev: 0,
-        allowSwipeNext: 0,
-        onlyExternal: 1
+        slidesPerView: 4
+    });
+
+    //Слайдер clients
+    var swiper2 = new Swiper('.clients__swiper', {
+        slidesPerView: 1,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: 1
+          }
     });
 
     //"Умные" alt у таб-карточек.
@@ -21,15 +28,26 @@ $(document).ready(function(){
 
     //Анимации карточек в карусели
     $('.carousel__clicked').on('mouseleave', function(){
-        $('.carousel__clicked').fadeOut(250);
+        $('.carousel__clicked').fadeOut(200);
     });
     $('.carousel__photo').on('mouseenter', function(){
-        $('.carousel__clicked').hide().eq($(this).index('.carousel__photo')).fadeIn(250);
+        $('.carousel__clicked').hide().eq($(this).index('.carousel__photo')).fadeIn(200);
+    });
+    $('.carousel__clicked').on('mouseenter', function(){
+        swiper1.autoplay.stop();
     });
     $('.carousel-clicked__wraper').on('mouseenter', function(){
         $(this).toggleClass('carousel-clicked__wraper_active');
     }).on('mouseleave', function(){
         $(this).toggleClass('carousel-clicked__wraper_active');
+    });
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 1401){
+            swiper1.autoplay.start();
+        }
+        if ($(this).scrollTop() < 400){
+            swiper1.autoplay.start();
+        }
     });
 
     //Табы
@@ -93,6 +111,26 @@ $(document).ready(function(){
         var _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
+    });
+
+    //Hover на постах
+    $('#post-1').on('mouseenter', function(){
+        $('#post-1 span').toggleClass('font-red');
+        $('#post-1 .blog-posts__sup-heading').toggleClass('font-red');
+        $('#post-1 .blog-posts__link').toggleClass('font-red');
+    }).on('mouseleave', function(){
+        $('#post-1 span').toggleClass('font-red');
+        $('#post-1 .blog-posts__sup-heading').toggleClass('font-red');
+        $('#post-1 .blog-posts__link').toggleClass('font-red');
+    });
+    $('#post-2').on('mouseenter', function(){
+        $('#post-2 span').toggleClass('font-red');
+        $('#post-2 .blog-posts__sup-heading').toggleClass('font-red');
+        $('#post-2 .blog-posts__link').toggleClass('font-red');
+    }).on('mouseleave', function(){
+        $('#post-2 span').toggleClass('font-red');
+        $('#post-2 .blog-posts__sup-heading').toggleClass('font-red');
+        $('#post-2 .blog-posts__link').toggleClass('font-red');
     });
 });
 
